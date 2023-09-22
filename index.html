@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kunj portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="jkLogo.png" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='responsive.css'>
+    
+	    <!-- <link rel='stylesheet' type='text/css' media='screen' href='second_responsive_for900px.css'> -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body onload="myPreloder()">
+    <div id="loding">
+        
+    </div>
+    <div id="minicircle"></div>
+        <div class="header">
+            <div class="logo toggle">
+                <img src="jkLogo.png" alt="logo">
+             </div>
+            <a href="#" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <div class="text-box">
+                <input type="text" value="" name="search" id="search">
+                <i class="fa fa-search"></i>
+                <!-- <i class='bx bx-sun toggle-icon'></i> -->
+            </div>
+            <!-- <div class="after">
+                <i class="fa-solid fa-bars"></i>
+            </div>     -->
+        </div>
+        <section class="first-section">
+            <div class="box-main">
+                <div class="one-se">
+                 <p class="text-big">Hi! I'm <span class="text"></span></p>
+                 <p class="text-small">I am full-stake developer and this is my
+                    portfolio website to show my all projects. ThankYou
+                    <div class="buttons">
+                        <button class="btn"><a href="portfolio.png" download>Download CV</a></button>
+                    </div>
+                 </p>
+                </div>
+                <div class="two-se">
+                    <img src="Kunj photo.jpg" alt="Kunj javiya{Image}">
+                </div>
+            </div>
+        </section>
+
+        <section class="training-section">
+            <div class="container">
+                <div class="training-items">
+                    <i class="fa-brands fa-html5"></i>
+                    <p class="h3-text">HTML Development</p>
+                    <p class="p-text"> Tow Year of experience in HTML language.
+                        I have make many project in with this language.
+                        90% Knowledge
+                    </p>
+                    <button class="btn">Read more..</button>
+                </div>
+                <div class="training-items">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p class="h3-text">CSS Development</p>
+                    <p class="p-text"> Tow Year of experience in CSS language.
+                        I have make project HTML and design part with the help of CSS language.
+                        70% to 80% Knowledge 
+                    </p>
+                    <button class="btn">Read more..</button>
+                </div>
+                <div class="training-items">
+                    <i class="fa-brands fa-js"></i>
+                    <p class="h3-text">JS Development</p>
+                    <p class="p-text"> One Year of experience in JavaScript language.
+                        I have use this language in many project and backend work.
+                        50% to 65% Knowledge
+                    </p>
+                    <button class="btn">Read more..</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-se">
+            <div class="main-footer">
+                <a href="https://www.instagram.com/javia_kunj/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="linkedin.com/in/𝐊𝐮𝐧𝐣-𝐉𝐚𝐯𝐢𝐲𝐚-a6543224b/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@TutsJK"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footer-nav">
+            <a href="#" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023; Designed by <span class="designer">Kunj</span></p>
+            </div>
+        </section>
+        </body>
+
+
+        <!-- GSAP CDN code -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="main.js"></script>
+        <!-- GSAP CDN code end -->
+
+        <!-- preloder js -->
+        <script>
+
+            var preloader = document.getElementById('loding');
+
+            function myPreloder(){
+                preloader.style.display = 'none';
+            }
+
+        </script>
+        <!-- preloder js end -->
+
+        <script>
+            const heading = document.querySelector('.text');
+
+            let text = 'Hi! I\'m Kunj';
+            let texts = ['Kunj Javiya', 'Web developer']
+            
+            isForwards = true;
+            let endValue = 1;
+            textCount = 0;
+
+            let id = setInterval(function(){
+            heading.textContent = texts[textCount].substring(0,endValue);
+            if(isForwards){
+                endValue++;
+            }
+            else{
+                endValue--;
+            }
+            if(endValue > text.length + 5){
+                isForwards = false;
+            }
+            if(endValue < 0){
+                isForwards = true;
+                textCount++;
+            }
+            if(textCount == texts.length){
+                textCount = 0;
+            }
+        },100)
+        </script>
+</html>
